@@ -31,4 +31,5 @@ Pre-requisite for ReactJS
  * Also got the location coordinate of the city, with sunset and sunrise time.
  * Got pictorial representation of the weather description of the city.
  
-![image](https://user-images.githubusercontent.com/103670494/228541815-b4a05480-955b-4d3f-8815-4da0f414bbaa.png)
+ ![image](https://user-images.githubusercontent.com/103670494/228627602-bba779dc-62dd-42ef-97d7-e1073c020382.png)
+
