@@ -25,7 +25,7 @@ Pre-requisite for ReactJS
  * Make use of the API key in "desp.js" file to read and make use of the data.
  
  ## Features added:
- * Created dynamic API : the background image changes at different weather.
+ * Created dynamic API ,the background image changes in different weather description.
  * To get the real time weather report we connected to OpenWeather Map using the API key generated.
  * Got the weather info of the different city like the min-temp,max-temp,humidity level, air pressure and wind speed.
  * Also got the location coordinate of the city, with sunset and sunrise time.
