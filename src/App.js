@@ -133,7 +133,7 @@ function App() {
 					</div>
 					<div className='info'>
 					    <div className='coordinate'>
-					    	<h2>Coordinate of {`${weather.name}`}</h2>
+					    	<h2>Current Location of {`${weather.name}`}</h2>
 					    	<div className='c1'>
 					    	    <h3 className='coord1'>Longitude :{`${weather.lon}`}</h3>
 					    	</div>
