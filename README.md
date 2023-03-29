@@ -1,6 +1,6 @@
 # WEATHER API
 
-Pre-requisite for ReactJS
+## Pre-requisite for ReactJS
 * NodeJS and NPM
 * React and React DOM
 * Webpack
