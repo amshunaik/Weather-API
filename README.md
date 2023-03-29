@@ -14,8 +14,7 @@ Pre-requisite for ReactJS
          * cd my-app
          * npm start
          * cd my-app
-         * write the code and get the necessary packages installed.
-         ```
+  ```
          
  ## Steps to be followed to create Our Weather Application:
  * createaccount in OpenWeather Map
