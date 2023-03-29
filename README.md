@@ -9,8 +9,11 @@ Pre-requisite for ReactJS
 - Open a new folder in vs-code or any other 
 - Install react Js using below steps:
          * npm -v (install corrrect version)
+         
          * npx create-react-app my-app (creating new react application)
+         
          * cd my-app
+         
          * npm start
          * cd my-app
          * write the code and get the necessary packages installed.
