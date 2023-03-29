@@ -2,6 +2,7 @@ import './App.css';
 //import Description from './components/New_add/desp.jsx';
 import cold from './components/images1/snow1.jpg';
 import hot from './components/images1/hot_summer.jpg';
+import rainy from './components/images1/rainy.jpg'
 import Description from './components/New_add/desp';
 import { useState,useEffect } from 'react';
 //import Today from './components/New_add/time';
@@ -30,13 +31,18 @@ function App() {
 			setweather(data);
 
 			const c = units ==="metric" ? 20 : 60;
-			///console.log(data.temp);
-			if(data.temp<=c){
+			console.log(data.temp);
+			const f =data.description.includes("cloud");
+			if(data.temp<=c&&!f){
 				setBg(cold);
 
 			} 
-			else {
+
+			else if(data.temp>20&&!f){
 				setBg(hot);
+			}
+			else if(f){
+				setBg(rainy);
 			}
 
 		};
@@ -176,164 +182,4 @@ function App() {
 }
 
 export default App;
-/*{`${new Date(`${weather.sunrise}`*1000)}`}*/
 
-  /////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////
-// React course Udemy//
-//import logo from './logo.svg';
-
-/*import './App.css';
-//import Expenseit from './components/ExpenseItem'
-import Expense from './components/Cost/Expense';
-import NewExpense from './components/NewExpense/NewExpense';
-import ExpensesFilter from './components/Cost/ExpenseFilter';
- //let name="Amshu";
-function App() {
-
-  const expenses=[{tit:'vghvg',amount:50, date:new Date(2021,1,8)},
-  {tit:'ahgbc',amount:85, date:new Date(2021,2,8)},
-  {tit:'vgv',amount:150, date:new Date(2021,8,8)},
-  {tit:'auihkbc',amount:250, date:new Date(2021,3,8)}
-];
-  const addNew = expenses=>{
-	console.log('In App.js');
-	console.log(expenses);
-  }
-  return (
-    <>
-    <nav className="s">
-      <h1>Lets get started!</h1>
-      <NewExpense  onAddNew={addNew}/>
-	  <ExpensesFilter/>
-
-      <Expense exp={expenses}></Expense>
-      
-
-      
-
-    </nav>
-    </>
-
-  );
-}
-
-export default App;*/
-
-
-/////////////////////////////////////////////////////
-// FSM design//
-/*
-import { useState } from 'react';
-import './App.css';
-import Editor from "@monaco-editor/react";
-import Navbar from './components/Navbar';
-import Axios from 'axios';
-import spinner from './spinner.png';
-//import '../mybackend./kite'
-
-function App() {
-
-// State variable to set users source code
-const [userCode, setUserCode] = useState(``);
-
-// State variable to set editors default language
-const [userLang, setUserLang] = useState("python");
-
-// State variable to set editors default theme
-const [userTheme, setUserTheme] = useState("vs-dark");
-
-// State variable to set editors default font size
-const [fontSize, setFontSize] = useState(20);
-
-// State variable to set users input
-const [userInput, setUserInput] = useState("");
-
-// State variable to set users output
-const [userOutput, setUserOutput] = useState("");
-
-// Loading state variable to show spinner
-// while fetching data
-const [loading, setLoading] = useState(false);
-
-const options = {
-	fontSize: fontSize
-}
-
-// Function to call the compile endpoint
-function compile() {
-	setLoading(true);
-	if (userCode === ``) {
-	return
-	}
-
-	// Post request to compile endpoint
-	Axios.post(`http://localhost:5000/compile`, {
-	code: userCode,
-	language: userLang,
-	input: userInput }).then((res) => {
-	setUserOutput(res.data.output);
-	}).then(() => {
-	setLoading(false);
-	})
-}
-
-// Function to clear the output screen
-function clearOutput() {
-	setUserOutput("");
-}
-
-return (
-	<div className="App">
-	<Navbar
-		userLang={userLang} setUserLang={setUserLang}
-		userTheme={userTheme} setUserTheme={setUserTheme}
-		fontSize={fontSize} setFontSize={setFontSize}
-	/>
-	<div className="main">
-		<div className="left-container">
-		<Editor
-			options={options}
-			height="calc(100vh - 50px)"
-			width="100%"
-			theme={userTheme}
-			language={userLang}
-			defaultLanguage="python"
-			defaultValue="# Enter your code here"
-			onChange={(value) => { setUserCode(value) }}
-		/>
-		<button className="run-btn" onClick={() => compile()}>
-			Run
-		</button>
-		</div>
-		<div className="right-container">
-		<h4>Input:</h4>
-		<div className="input-box">
-			<textarea id="code-inp" onChange=
-			{(e) => setUserInput(e.target.value)}>
-			</textarea>
-		</div>
-		<h4>Output:</h4>
-		{loading ? (
-			<div className="spinner-box">
-			<img src={spinner} alt="Loading..." />
-			</div>
-		) : (
-			<div className="output-box">
-			<pre>{userOutput}</pre>
-			<button onClick={() => { clearOutput() }}
-				className="clear-btn">
-				Clear
-			</button>
-			</div>
-		)}
-		</div>
-	</div>
-	</div>
-);
-}
-
-export default App;
-
-*/
