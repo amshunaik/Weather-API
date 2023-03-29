@@ -31,17 +31,18 @@ function App() {
 			setweather(data);
 
 			const c = units ==="metric" ? 20 : 60;
-			console.log(data.temp);
+			//console.log(data.temp);
 			const f =data.description.includes("cloud");
-			if(data.temp<=c&&!f){
+			const g =data.description.includes("rain");
+			if((data.temp<=c&&!f)&&(data.temp<=c&&!g)){
 				setBg(cold);
 
 			} 
 
-			else if(data.temp>20&&!f){
+			else if((data.temp>20&&!f)&&(data.temp>20&&!g)){
 				setBg(hot);
 			}
-			else if(f){
+			else if(f||g){
 				setBg(rainy);
 			}
 
