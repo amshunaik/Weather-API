@@ -26,7 +26,7 @@
  
  ## Features added:
  * Created dynamic API ,the background image changes in different weather description.
- * To get the real time weather report we connected to OpenWeather Map using the API key generated.
+ * To get the real time weather report  connect to OpenWeather Map using the API key generated.
  * Got the weather info of the different city like the min-temp,max-temp,humidity level, air pressure and wind speed.
  * Also got the location coordinate of the city, with sunset and sunrise time.
  * Got pictorial representation of the weather description of the city.
