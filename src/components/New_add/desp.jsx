@@ -1,7 +1,6 @@
 import React from "react";
 import './desp.css'
 //import {FaArrowDown} from 'react-icons/fa';
-
 import { FaArrowUp, FaArrowDown, FaWind } from "react-icons/fa";
 import { BiHappy } from "react-icons/bi";
 import { MdCompress, MdOutlineWaterDrop } from "react-icons/md";
