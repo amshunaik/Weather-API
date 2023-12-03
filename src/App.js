@@ -6,9 +6,6 @@ import rainy from './components/images1/rainy.jpg'
 import Description from './components/New_add/desp';
 import { useState,useEffect } from 'react';
 //import Today from './components/New_add/time';
-//import top_button from './New_add/top_button';
-/*import UilReact from '@iconscout/react-unicons/icons/uil-react'*/
-//import Expenseit from './components/ExpenseItem'
 import { getformat } from './components/New_add/weather_service';
 //import { MdOpacity } from 'react-icons/md';
 
