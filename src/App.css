@@ -41,6 +41,8 @@
 .king{
   /*text-align: center;*/
   align-items: center;
+  border: 1px solid black;
+
   padding-right: 25px;
   max-width: screen-medium;
   height: 500px;
